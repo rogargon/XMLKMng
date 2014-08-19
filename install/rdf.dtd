@@ -1,0 +1,106 @@
+<!-- edited with XML Spy v3.0 NT (http://www.xmlspy.com) by BoB Best (none) -->
+<!ENTITY % propEltAttr "id              ID #IMPLIED
+                	parseType       ( Resource | Literal ) #IMPLIED 
+                	resource        CDATA #IMPLIED 
+                	bagID           NMTOKEN #IMPLIED
+	        	rdf:value       CDATA #IMPLIED">
+<!--======================= DOUBLIN CORE ELEMENTS =========================== -->
+<!ENTITY % DCAttrib "DC:title | DC:creator | DC:subject | DC:description | DC:publisher | DC:contributor | DC:date | DC:type | DC:format | DC:identifier | DC:source | DC:language | DC:relation | DC:coverage | DC:rights">
+<!ELEMENT DC:identifier (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:title (#PCDATA | Seq | Alt)*>
+<!ELEMENT DC:creator (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:subject (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:description (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:publisher (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:contributor (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:date (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:type (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:format (#PCDATA)>
+<!ELEMENT DC:source (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:language (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:relation (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:coverage (#PCDATA | Bag | Seq | Alt)*>
+<!ELEMENT DC:rights (#PCDATA | Bag | Seq | Alt)*>
+<!--================ KXML APLICATION DESCRIPTION ELEMENTS ===================== -->
+<!ENTITY % kxmlAttrib "kxml:Owner?, kxml:Read?, kxml:Write?, kxml:DTDName?, kxml:DTDUri?, kxml:NewContent?, kxml:OldContent?">
+<!ELEMENT kxml:Owner (#PCDATA)>
+<!ELEMENT kxml:Read (Public | Bag)>
+<!ELEMENT kxml:Write (Public | Bag)>
+<!ELEMENT Public EMPTY>
+<!ELEMENT kxml:DTDName (#PCDATA)>
+<!ELEMENT kxml:DTDUri (#PCDATA)>
+<!ELEMENT kxml:NewContent (#PCDATA)>
+<!ELEMENT kxml:OldContent (#PCDATA)>
+<!--================ OTHER ELEMENTS ===================== -->
+<!ENTITY % otherAttrib "rdf:type?, res:author?, res:cooperatesWith?, res:publication?, res:name?">
+<!ELEMENT rdf:type (#PCDATA)>
+<!ELEMENT res:author (#PCDATA)>
+<!ELEMENT res:cooperatesWith (#PCDATA)>
+<!ELEMENT res:publication (#PCDATA)>
+<!ELEMENT res:name (#PCDATA)>
+<!-- ====================== ELEMENT TYPE DECLARATIONS ======================== -->
+<!ELEMENT RDF ANY>
+<!--ATTLIST RDF
+	xmlns CDATA #FIXED "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs CDATA #FIXED "http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:DC CDATA #FIXED "http://purl.org/DC/elements/1.1#"
+	xmlns:kxml CDATA #FIXED "file:./ns/kxml-ns.xml#"
+-->
+<!ELEMENT Description (Bag | Seq | Alt | ((%kxmlAttrib;) | (%DCAttrib;) | (%otherAttrib;))* )>
+<!ATTLIST Description ID CDATA #IMPLIED
+	type CDATA #IMPLIED
+	about CDATA #IMPLIED
+	aboutEach CDATA #IMPLIED
+	aboutEachPrefix CDATA #IMPLIED
+	bagID NMTOKEN #IMPLIED
+>
+<!ELEMENT Seq (li)*>
+<!ATTLIST Seq id ID #IMPLIED
+	_1 CDATA #IMPLIED
+	_2 CDATA #IMPLIED
+	_3 CDATA #IMPLIED
+	_4 CDATA #IMPLIED
+	_5 CDATA #IMPLIED
+	_6 CDATA #IMPLIED
+	_7 CDATA #IMPLIED
+	_8 CDATA #IMPLIED
+>
+<!ELEMENT Bag (li)*>
+<!ATTLIST Bag id ID #IMPLIED
+	_1 CDATA #IMPLIED
+	_2 CDATA #IMPLIED
+	_3 CDATA #IMPLIED
+	_4 CDATA #IMPLIED
+	_5 CDATA #IMPLIED
+	_6 CDATA #IMPLIED
+	_7 CDATA #IMPLIED
+	_8 CDATA #IMPLIED
+>
+<!ELEMENT Alt (li)*>
+<!ATTLIST Alt id ID #IMPLIED
+	_1 CDATA #IMPLIED
+	_2 CDATA #IMPLIED
+	_3 CDATA #IMPLIED
+	_4 CDATA #IMPLIED
+	_5 CDATA #IMPLIED
+	_6 CDATA #IMPLIED
+	_7 CDATA #IMPLIED
+	_8 CDATA #IMPLIED
+>
+<!ELEMENT li ANY>
+<!ATTLIST li resource CDATA #IMPLIED
+	parseType (Resource | Literal) #IMPLIED
+>
+<!ELEMENT subject ANY>
+<!ATTLIST subject %propEltAttr; 
+>
+<!ELEMENT predicate ANY>
+<!ATTLIST predicate %propEltAttr; 
+>
+<!ELEMENT object ANY>
+<!ATTLIST object %propEltAttr; 
+>
+<!ELEMENT type ANY>
+<!ATTLIST type %propEltAttr; 
+>
+<!ELEMENT value ANY>

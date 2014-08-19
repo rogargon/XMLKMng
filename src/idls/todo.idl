@@ -1,0 +1,326 @@
+module kxml
+{
+module util
+{
+   module remote
+   {
+      typedef sequence<string> StringArray;
+      typedef sequence<StringArray> StringArrayArray;
+
+      interface RemoteObserver
+      {
+         void update(in Object observable, in any data);
+      };   
+
+      interface RemoteObservable
+      {
+         void deleteObserver(in RemoteObserver observer);
+         void addObserver(in RemoteObserver observer);
+      }; 
+   };
+};
+
+module domain
+{
+   module remote
+   {
+      interface RemoteElement : util::remote::RemoteObservable
+      {
+	 boolean getMetaXML(out string metaxml);
+	 //string getIdStr();
+      };
+
+      interface RemoteHierarchyElement : RemoteElement
+      {
+         //util::remote::StringArray contentIds();
+
+         /*boolean getMeta(out string idElem,
+			 out kxml::util::remote::StringArrayArray attributes, 
+			 out string owner, 
+			 out boolean publicRead, out boolean publicWrite,
+                      	 out kxml::util::remote::StringArray aclRead, 
+                      	 out kxml::util::remote::StringArray aclWrite);*/
+      };
+
+      interface RemoteDocument : RemoteElement
+      {
+         /*boolean getMeta(out string idElem,
+			 out kxml::util::remote::StringArrayArray attributes, 
+			 out string owner, 
+			 out boolean publicRead, out boolean publicWrite,
+                      	 out kxml::util::remote::StringArray aclRead, 
+                      	 out kxml::util::remote::StringArray aclWrite,
+			 out string uri);*/
+      };
+   };
+};
+
+module logic
+{
+   module exceptions
+   {
+      exception IdentificationException{ string reason; };
+      exception UserNotFoundException{ string reason; };
+      exception RemoveException{ string reason; };
+      exception ReadAccessException{ string reason; };
+      exception WriteAccessException{ string reason; };
+      exception NotOwnerException{ string reason; };
+      exception NotAdministratorException{ string reason; };
+      exception ElementNotFoundException{ string reason; };
+      exception ElementExistsException{ string reason; };
+      exception ModificationException{ string reason; };
+      exception CreationException{ string reason; };
+      exception ParsingException{ string reason; };
+   };
+
+   interface TransacOrigin
+   {
+      	util::remote::StringArray setUser(in string userId, in string passwd, 
+					  out boolean isAdmin)
+      			 raises(kxml::logic::exceptions::IdentificationException);
+
+	domain::remote::RemoteElement getElement(in string idElem)
+			 raises(kxml::logic::exceptions::ReadAccessException,
+                                kxml::logic::exceptions::ElementNotFoundException,
+  				kxml::logic::exceptions::UserNotFoundException);
+
+	util::remote::StringArray getDocTypes( );
+
+	util::remote::StringArray getDTDs( );
+
+	util::remote::StringArray getXSLs(in string dtdName)
+                         raises(kxml::logic::exceptions::ElementNotFoundException);
+
+	util::remote::StringArray expandElement(in string idElem, 
+                                       	in kxml::util::remote::RemoteObserver observer)
+                      	 raises(kxml::logic::exceptions::ReadAccessException, 
+                                kxml::logic::exceptions::ElementNotFoundException,
+   				kxml::logic::exceptions::UserNotFoundException);
+
+	void collapseElement(in string idElem, 
+			     in kxml::util::remote::RemoteObserver observer)
+ 			 raises(kxml::logic::exceptions::ElementNotFoundException);
+
+	util::remote::StringArray readDocument(in string idElem, 
+                                        in kxml::util::remote::RemoteObserver observer)
+                       	 raises(kxml::logic::exceptions::ReadAccessException, 
+                                kxml::logic::exceptions::ElementNotFoundException,
+   				kxml::logic::exceptions::UserNotFoundException);
+
+	util::remote::StringArray modifyDocument(in string idElem, 
+                                        in kxml::util::remote::RemoteObserver observer)
+                       	 raises(kxml::logic::exceptions::WriteAccessException, 
+                                kxml::logic::exceptions::ElementNotFoundException,
+   				kxml::logic::exceptions::UserNotFoundException);
+
+	void endReading(in string idElem, in kxml::util::remote::RemoteObserver observer)
+                       	 raises(kxml::logic::exceptions::ElementNotFoundException);
+
+	void endModifying(in string idElem, in kxml::util::remote::RemoteObserver observer,
+			  in boolean hasChanged)
+                       	 raises(kxml::logic::exceptions::ElementNotFoundException);
+
+	boolean closeArchive();
+
+	void modifyMetadata(in string idElem, in string metaxml)
+			 raises(kxml::logic::exceptions::ElementNotFoundException, 
+			       	kxml::logic::exceptions::UserNotFoundException,
+			        kxml::logic::exceptions::WriteAccessException, 
+			        kxml::logic::exceptions::NotOwnerException,
+			        kxml::logic::exceptions::ParsingException, 
+  				kxml::logic::exceptions::ModificationException);
+
+	domain::remote::RemoteElement createElement(in string idElem, 
+       						    in string metaxml)
+			 raises(kxml::logic::exceptions::ElementExistsException, 
+			    	kxml::logic::exceptions::UserNotFoundException,
+			       	kxml::logic::exceptions::WriteAccessException, 
+			        kxml::logic::exceptions::ParsingException, 
+			       	kxml::logic::exceptions::CreationException);
+
+	domain::remote::RemoteDocument fileDocument(in string idElem, 
+ 						    in string metaxml)
+			 raises(kxml::logic::exceptions::ElementExistsException, 
+			    	kxml::logic::exceptions::UserNotFoundException,
+			       	kxml::logic::exceptions::WriteAccessException, 
+			        kxml::logic::exceptions::ParsingException, 
+			       	kxml::logic::exceptions::CreationException);
+
+	void removeDocument(in string idElem, in boolean deleteContent)
+			 raises(kxml::logic::exceptions::ElementNotFoundException, 
+			  	kxml::logic::exceptions::UserNotFoundException,
+			       	kxml::logic::exceptions::WriteAccessException,
+		       	       	kxml::logic::exceptions::RemoveException);
+
+	void removeHElement(in string idElem)
+			 raises(kxml::logic::exceptions::ElementNotFoundException, 
+			       	kxml::logic::exceptions::UserNotFoundException,
+			       	kxml::logic::exceptions::WriteAccessException, 
+			       	kxml::logic::exceptions::RemoveException);
+
+	void copyElement(in string idElemTarget, in string idElemDestination)
+			 raises(kxml::logic::exceptions::ElementNotFoundException, 
+			       	kxml::logic::exceptions::UserNotFoundException,
+			       	kxml::logic::exceptions::ReadAccessException,
+			       	kxml::logic::exceptions::CreationException);
+
+	void moveElement(in string idElemTarget, in string idElemDestination)
+			 raises(kxml::logic::exceptions::ElementNotFoundException, 
+			       	kxml::logic::exceptions::UserNotFoundException,
+			       	kxml::logic::exceptions::ReadAccessException,
+			       	kxml::logic::exceptions::WriteAccessException,
+			       	kxml::logic::exceptions::CreationException);
+
+	void associateXSL(in string xslName, in string xslUrl, in string dtdName)
+			 raises(kxml::logic::exceptions::ElementNotFoundException, 
+			       	kxml::logic::exceptions::CreationException);
+
+	void defineDocType(in string typeId, in string defaultCommand)
+			 raises(kxml::logic::exceptions::NotAdministratorException, 
+			       	kxml::logic::exceptions::UserNotFoundException);
+
+	void createUser(in string userId, in string password, in boolean administrator)
+			 raises(kxml::logic::exceptions::NotAdministratorException, 
+			       	kxml::logic::exceptions::UserNotFoundException,
+				kxml::logic::exceptions::CreationException);
+
+	void createGroup(in string groupId)
+			 raises(kxml::logic::exceptions::NotAdministratorException, 
+  				kxml::logic::exceptions::ElementExistsException,
+  				kxml::logic::exceptions::UserNotFoundException);
+
+	void removeUser(in string userId)
+			 raises(kxml::logic::exceptions::NotAdministratorException, 
+  				kxml::logic::exceptions::ElementNotFoundException,
+  				kxml::logic::exceptions::UserNotFoundException);
+
+	void removeGroup(in string groupId)
+			 raises(kxml::logic::exceptions::NotAdministratorException, 
+  				kxml::logic::exceptions::ElementNotFoundException,
+  				kxml::logic::exceptions::UserNotFoundException);
+
+	void addUserGroup(in string userId, in string groupId)
+			 raises(kxml::logic::exceptions::NotAdministratorException, 
+  				kxml::logic::exceptions::ElementExistsException,
+  				kxml::logic::exceptions::ElementNotFoundException,
+  				kxml::logic::exceptions::UserNotFoundException);
+
+	void removeUserGroup(in string userId , in string groupId)
+			 raises(kxml::logic::exceptions::NotAdministratorException, 
+  				kxml::logic::exceptions::ElementNotFoundException,
+  				kxml::logic::exceptions::UserNotFoundException);
+   };
+
+
+   interface TransacOriginFactory
+   {
+      TransacOrigin getTransacOrigin(in kxml::util::remote::RemoteObserver logObserver);
+
+      boolean removeTransacOrigin();
+   };
+
+
+   module server
+   {
+      interface TransacOriginSrv
+      {
+         string getArchiveXML(in string userId, in string passwd)
+                      	raises(kxml::logic::exceptions::IdentificationException);
+      };
+   };
+
+   module distributed
+   {
+      interface ConsistencyManagerClt
+      {
+         void modifyMetadata(in long long trNumber, in string idElem, 
+                             in string metaxml);
+	
+	 void createElement(in long long trNumber, in string idElem, 
+			    in string metaxml);
+
+	 void fileDocument(in long long trNumber, in string idElem, 
+			    in string metaxml);
+
+	 void modifyDoc(in long long trNumber, in string idElem);
+
+	 void endModifying(in long long trNumber, in string idElem);
+
+	 void removeHElem(in long long trNumber, in string idElem, in string userId);
+
+	 void removeDoc(in long long trNumber, in string idElem, in boolean delContent);
+
+	 void copyElem(in long long trNumber, in string idElemTarget,
+  		       in string idElemDestination);
+
+ 	 void moveElem(in long long trNumber, in string idElemTarget,
+   		      in string idElemDestination);
+
+	 void associateXSL(in long long trNumber, in string xslName, in string xslURL,
+			   in string dtdName);
+
+	 void defineDocType(in long long trNumber, in string typeId, in string command);
+
+	 void createUser(in long long trNumber, in string userId, in string password,
+			 in boolean administrator);
+
+	 void createGroup(in long long trNumber, in string groupId);
+
+	 void removeUser(in long long trNumber, in string userId);
+
+	 void removeGroup(in long long trNumber, in string groupId);
+
+	 void addUsrGrp(in long long trNumber, in string userId, in string groupId);
+
+	 void removeUsrGrp(in long long trNumber, in string userId, in string groupId);
+      };
+
+      interface ConsistencyManagerSrv
+      {
+	 void addClientManager(in ConsistencyManagerClt consistencyMngClt);
+
+	 void removeClientManager(in ConsistencyManagerClt consistencyMngClt);
+
+	 void lock();
+
+	 void unlock();
+
+         long long modifyMetaDist(in string idElem, in string metaxml);
+
+         long long createElemDist(in string idElem, in string metaxml);
+
+         long long fileDocDist(in string idElem, in string metaxml);
+
+	 long long modifyDocDist(in string idElem);
+
+	 long long endModifyingDist(in string idElem);
+
+	 long long removeHElemDist (in string idElem, in string userId);
+
+	 long long removeDocDist (in string idElem, in boolean delContent);
+
+	 long long copyElemDist (in string idElemTarget, in string idElemDestination);
+
+	 long long moveElemDist (in string idElemTarget, in string idElemDestination);
+
+	 long long associateXSLDist(in string xslName, in string xslURL,
+				    in string dtdName);
+
+	 long long defineDocTypeDist (in string typeId, in string command);
+
+ 	 long long createUserDist (in string userId, in string password, 
+				   in boolean administrator);
+
+	 long long createGroupDist (in string groupId);
+
+	 long long removeUserDist (in string userId);
+
+	 long long removeGroupDist (in string groupId);
+
+	 long long addUsrGrpDist (in string userId, in string groupId);
+
+	 long long removeUsrGrpDist (in string userId, in string groupId);
+      };
+   };
+};
+};

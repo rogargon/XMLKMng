@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalogo SYSTEM "catalogo.dtd">
+<?xml:stylesheet type="text/xsl" href="catalogo.xsl"?>
+<catalogo>
+	<producto>
+		<precio moneda="€" tipo="mayor">24.95</precio>
+		<precio moneda="€" tipo="detalle">39.95</precio>
+		<entrega metodo="Seur" moneda="€">4.00</entrega>
+	</producto>
+</catalogo>

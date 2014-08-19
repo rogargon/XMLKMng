@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE kxml:Archive SYSTEM "archive.dtd">
+<kxml:Archive>
+	<kxml:Users>
+		<kxml:User id="saarela" passwd="saarela"/>
+		<kxml:User id="lassila" passwd="lassila"/>
+		<kxml:User id="demo" passwd=""/>
+		<kxml:User id="administrator" passwd="pass" administrator="TRUE">
+			<kxml:DocId id="root/help/kxml/manual/Main page"/>
+		</kxml:User>
+	</kxml:Users>
+	<kxml:Groups>
+		<kxml:Group id="investigadores">
+			<kxml:Member id="saarela"/>
+			<kxml:Member id="lassila"/>
+		</kxml:Group>
+	</kxml:Groups>
+	<kxml:DocTypes>
+		<kxml:DocType id="text/xml" command="kxml.gui.xml.XMLEditorTab.class"/>
+		<kxml:DocType id="application/msword" command="C:\Archivos de programa\Microsoft Office\Office\winword.exe"/>
+		<kxml:DocType id="text/plain" command="kxml.gui.TextEditorTab.class"/>
+		<kxml:DocType id="text/html" command="kxml.gui.HTMLEditorTab.class"/>
+	</kxml:DocTypes>
+	<kxml:Dtds>
+		<kxml:Dtd name="ADDRESSBOOK" uri="file:./examples/agenda.dtd">
+			<kxml:Xsl name="targetas" uri="file:./examples/agenda.xsl"/>
+			<kxml:Xsl name="tabla" uri="file:./examples/agenda2.xsl"/>
+		</kxml:Dtd>
+	</kxml:Dtds>
+	<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+		<Description ID="root/">
+			<kxml:Owner>administrator</kxml:Owner>
+			<kxml:Read>
+				<Public/>
+			</kxml:Read>
+			<kxml:Write>
+				<Public/>
+			</kxml:Write>
+			<DC:identifier>root/</DC:identifier>
+			<DC:title>Raíz del archivo</DC:title>
+		</Description>
+	</RDF>
+	<kxml:Content>
+		<Bag>
+			<li>
+				<kxml:Cabinet>
+					<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+						<Description ID="root/informática/">
+							<kxml:Owner>administrator</kxml:Owner>
+							<kxml:Read>
+								<Public/>
+							</kxml:Read>
+							<kxml:Write>
+								<Public/>
+							</kxml:Write>
+							<DC:identifier>root/informática/</DC:identifier>
+							<DC:title>Documentos de informática</DC:title>
+							<DC:description>Documentos variados sobre informática en general</DC:description>
+							<DC:subject>
+								<Bag>
+									<li>informática</li>
+									<li>ordenadores</li>
+								</Bag>
+							</DC:subject>
+						</Description>
+					</RDF>
+					<kxml:Content>
+						<Bag>
+							<li>
+								<kxml:Drawer>
+									<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+										<Description ID="root/informática/investigación/">
+											<kxml:Owner>administrator</kxml:Owner>
+											<kxml:Read>
+												<Public/>
+											</kxml:Read>
+											<kxml:Write>
+												<Bag/>
+											</kxml:Write>
+											<DC:identifier>root/informática/investigación/</DC:identifier>
+											<DC:title>Investigación informática</DC:title>
+											<DC:description>Temas relacionados con la investigación en informática</DC:description>
+											<DC:subject>
+												<Bag>
+													<li>investigación</li>
+													<li>publicación</li>
+													<li>investigador</li>
+												</Bag>
+											</DC:subject>
+										</Description>
+									</RDF>
+									<kxml:Content>
+										<Bag>
+											<li>
+												<kxml:Folder>
+													<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+														<Description ID="root/informática/investigación/publicaciones/">
+															<kxml:Owner>administrator</kxml:Owner>
+															<kxml:Read>
+																<Public/>
+															</kxml:Read>
+															<kxml:Write>
+																<Bag/>
+															</kxml:Write>
+															<DC:identifier>root/informática/investigación/publicaciones/</DC:identifier>
+															<DC:title>Publicaciones de investigación</DC:title>
+														</Description>
+													</RDF>
+													<kxml:Content>
+														<Bag>
+															<li>
+																<kxml:Folder>
+																	<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+																		<Description ID="root/informática/investigación/publicaciones/RDF/">
+																			<kxml:Owner>administrator</kxml:Owner>
+																			<kxml:Read>
+																				<Public/>
+																			</kxml:Read>
+																			<kxml:Write>
+																				<Bag/>
+																			</kxml:Write>
+																			<DC:identifier>root/informática/investigación/publicaciones/RDF/</DC:identifier>
+																			<DC:title>Publicaciones sobre RDF</DC:title>
+																		</Description>
+																	</RDF>
+																	<kxml:Content>
+																		<Bag>
+																			<li>
+																				<kxml:Document>
+																					<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#" xmlns:res="file:./ns/research-ontology-schema.xml#">
+																						<Description about="file:./examples/rdf-simple-intro.html">
+																							<kxml:Owner>laasila</kxml:Owner>
+																							<kxml:Read>
+																								<Public/>
+																							</kxml:Read>
+																							<kxml:Write>
+																								<Bag/>
+																							</kxml:Write>
+																							<DC:identifier>root/informática/investigación/publicaciones/RDF/IntroRDF</DC:identifier>
+																							<DC:title>Introduction to RDF Metadata</DC:title>
+																							<DC:format>text/html</DC:format>
+																							<DC:date>1997-11-13</DC:date>
+																							<rdf:type>res#TechnicalReport</rdf:type>
+																							<res:author>http://www.w3.org/Home/Lassila.html</res:author>
+																						</Description>
+																					</RDF>
+																				</kxml:Document>
+																			</li>
+																		</Bag>
+																	</kxml:Content>
+																</kxml:Folder>
+															</li>
+														</Bag>
+													</kxml:Content>
+												</kxml:Folder>
+											</li>
+											<li>
+												<kxml:Folder>
+													<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+														<Description ID="root/informática/investigación/investigadores/">
+															<kxml:Owner>administrator</kxml:Owner>
+															<kxml:Read>
+																<Public/>
+															</kxml:Read>
+															<kxml:Write>
+																<Bag/>
+															</kxml:Write>
+															<DC:identifier>root/informática/investigación/investigadores/</DC:identifier>
+															<DC:title>Investigadores</DC:title>
+														</Description>
+													</RDF>
+													<kxml:Content>
+														<Bag>
+															<li>
+																<kxml:Document>
+																	<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#" xmlns:res="file:./ns/research-ontology-schema.xml#">
+																		<Description about="http://www.w3.org/Home/Lassila.html">
+																			<kxml:Owner>lassila</kxml:Owner>
+																			<kxml:Read>
+																				<Bag>
+																					<li>investigadores</li>
+																				</Bag>
+																			</kxml:Read>
+																			<kxml:Write>
+																				<Bag/>
+																			</kxml:Write>
+																			<DC:identifier>root/informática/investigación/investigadores/Ora Lassila</DC:identifier>
+																			<DC:format>text/html</DC:format>
+																			<rdf:type>res#Researcher</rdf:type>
+																			<res:name>Lassila</res:name>
+																			<res:cooperatesWith>http://www.w3.org/Home/Saarela.html</res:cooperatesWith>
+																		</Description>
+																	</RDF>
+																</kxml:Document>
+															</li>
+															<li>
+																<kxml:Document>
+																	<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#" xmlns:res="file:./ns/research-ontology-schema.xml#">
+																		<Description about="http://www.w3.org/Home/Saarela.html">
+																			<kxml:Owner>saarela</kxml:Owner>
+																			<kxml:Read>
+																				<Bag>
+																					<li>investigadores</li>
+																				</Bag>
+																			</kxml:Read>
+																			<kxml:Write>
+																				<Bag/>
+																			</kxml:Write>
+																			<DC:identifier>root/informática/investigación/investigadores/Janne Saarela</DC:identifier>
+																			<DC:format>text/html</DC:format>
+																			<rdf:type>res#Researcher</rdf:type>
+																			<res:name>Saarela</res:name>
+																		</Description>
+																	</RDF>
+																</kxml:Document>
+															</li>
+														</Bag>
+													</kxml:Content>
+												</kxml:Folder>
+											</li>
+										</Bag>
+									</kxml:Content>
+								</kxml:Drawer>
+							</li>
+						</Bag>
+					</kxml:Content>
+				</kxml:Cabinet>
+			</li>
+			<li>
+				<kxml:Cabinet>
+					<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+						<Description ID="root/help/">
+							<kxml:Owner>administrator</kxml:Owner>
+							<kxml:Read>
+								<Public/>
+							</kxml:Read>
+							<kxml:Write>
+								<Bag/>
+							</kxml:Write>
+							<DC:identifier>root/help/</DC:identifier>
+						</Description>
+					</RDF>
+					<kxml:Content>
+						<Bag>
+							<li>
+								<kxml:Drawer>
+									<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+										<Description ID="root/help/kxml/">
+											<kxml:Owner>administrator</kxml:Owner>
+											<kxml:Read>
+												<Public/>
+											</kxml:Read>
+											<kxml:Write>
+												<Bag/>
+											</kxml:Write>
+											<DC:identifier>root/help/kxml/</DC:identifier>
+										</Description>
+									</RDF>
+									<kxml:Content>
+										<Bag>
+											<li>
+												<kxml:Folder>
+													<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+														<Description ID="root/help/kxml/manual/">
+															<kxml:Owner>administrator</kxml:Owner>
+															<kxml:Read>
+																<Public/>
+															</kxml:Read>
+															<kxml:Write>
+																<Bag/>
+															</kxml:Write>
+															<DC:identifier>root/help/kxml/manual/</DC:identifier>
+														</Description>
+													</RDF>
+													<kxml:Content>
+														<Bag>
+															<li>
+																<kxml:Document>
+																	<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+																		<Description about="file:./help/main.html">
+																			<kxml:Owner>administrator</kxml:Owner>
+																			<kxml:Read>
+																				<Public/>
+																			</kxml:Read>
+																			<kxml:Write>
+																				<Bag/>
+																			</kxml:Write>
+																			<DC:identifier>root/help/kxml/manual/Main page</DC:identifier>
+																			<DC:format>text/html</DC:format>
+																		</Description>
+																	</RDF>
+																</kxml:Document>
+															</li>
+														</Bag>
+													</kxml:Content>
+												</kxml:Folder>
+											</li>
+											<li>
+												<kxml:Folder>
+													<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+														<Description ID="root/help/kxml/ejemplos/">
+															<kxml:Owner>administrator</kxml:Owner>
+															<kxml:Read>
+																<Bag/>
+															</kxml:Read>
+															<kxml:Write>
+																<Bag/>
+															</kxml:Write>
+															<DC:identifier>root/help/kxml/ejemplos/</DC:identifier>
+														</Description>
+													</RDF>
+													<kxml:Content>
+														<Bag>
+															<li>
+																<kxml:Document>
+																	<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+																		<Description about="file:./examples/agenda.xml">
+																			<kxml:Owner>administrator</kxml:Owner>
+																			<kxml:Read>
+																				<Bag>
+																					<li>administrator</li>
+																					<li>roberto</li>
+																				</Bag>
+																			</kxml:Read>
+																			<kxml:Write>
+																				<Bag/>
+																			</kxml:Write>
+																			<DC:identifier>root/informática/internet/xml/Ejemplo-Agenda</DC:identifier>
+																			<DC:title>Ejemplo XML de una agenda</DC:title>
+																			<kxml:DTDName>ADDRESSBOOK</kxml:DTDName>
+																			<DC:format>text/xml</DC:format>
+																			<DC:description>Ejemplo de documento XML</DC:description>
+																		</Description>
+																	</RDF>
+																</kxml:Document>
+															</li>
+															<li>
+																<kxml:Document>
+																	<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+																		<Description about="file:./examples/LotusXSL.readme">
+																			<kxml:Owner>administrator</kxml:Owner>
+																			<kxml:Read>
+																				<Bag/>
+																			</kxml:Read>
+																			<kxml:Write>
+																				<Bag/>
+																			</kxml:Write>
+																			<DC:identifier>root/informática/internet/xml/Readme-LotusXSL</DC:identifier>
+																			<DC:title>Readme de LotusXSL</DC:title>
+																			<DC:format>text/plain</DC:format>
+																			<DC:description>Ejemplo de documento texto plano</DC:description>
+																		</Description>
+																	</RDF>
+																</kxml:Document>
+															</li>
+															<li>
+																<kxml:Document>
+																	<RDF xmlns:DC="file:./ns/rec-dc-ns.xml#" xmlns:kxml="file:./ns/kxml-ns.xml#" xmlns:rdf="file:./ns/rdf-syntax-ns.xml#" xmlns:rdfs="file:./ns/rdf-schema-ns.xml#">
+																		<Description about="file:./examples/Intro.doc">
+																			<kxml:Owner>administrator</kxml:Owner>
+																			<kxml:Read>
+																				<Public/>
+																			</kxml:Read>
+																			<kxml:Write>
+																				<Public/>
+																			</kxml:Write>
+																			<DC:identifier>root/help/kxml/ejemplos/Documento KXML</DC:identifier>
+																			<DC:format>application/msword</DC:format>
+																			<DC:description>Ejemplo de documento MS-Word</DC:description>
+																		</Description>
+																	</RDF>
+																</kxml:Document>
+															</li>
+														</Bag>
+													</kxml:Content>
+												</kxml:Folder>
+											</li>
+										</Bag>
+									</kxml:Content>
+								</kxml:Drawer>
+							</li>
+						</Bag>
+					</kxml:Content>
+				</kxml:Cabinet>
+			</li>
+		</Bag>
+	</kxml:Content>
+</kxml:Archive>

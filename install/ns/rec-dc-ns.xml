@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	 xmlns:rdfs="rdf-schema-ns.xml#" 
+	 xmlns:dc="rec-dc-ns.xml#">
+<rdf:Description about="" 
+ dc:title="The Dublin Core Element Set Version 1.1" 
+ dc:creator="Dublin Core Metadata Inititative" 
+ dc:description="The Dublin Core is a simple metadata element set intended to facilitate discovery of electronic resources.  This document presents the proposed new definitions for the Dublin Core metadata elements." 
+ dc:date="1999-07-02" />
+
+<rdf:Description ID="title" rdfs:label="Title"
+ rdfs:comment="The name given to the resource. Typically, a Title will be a name by which the resource is formally known.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="creator" rdfs:label="Author/Creator" 
+ rdfs:comment="An entity primarily responsible for making the content of the resource.  Examples, of a Creator include a person, and organisation, or a service.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="subject" rdfs:label="Subject and Keywords" 
+ rdfs:comment="The topic of the content of the resource. Typically, a Subject will be expressed as keywords or key phrases or classification codes that describe the topic of the resource. Recommended best practice is to select a value from a controlled vocabulary or formal classification scheme.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="description" rdfs:label="Description"
+ rdfs:comment="An account of the content of the resource. Description may include but is not limited to: an abstract, table of contents, reference to a graphical representation of content or a free-text account of the content.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="publisher" rdfs:label="Publisher"
+ rdfs:comment="The entity responsible for making the resource available.  Examples of a Publisher include a person, an organisation, or a service. Typically, the name of a Publisher should be used to indicate the entity.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="contributor" rdfs:label="Contributor" 
+rdfs:comment="An entity responsible for making contributions to the content of the resource.  Examples of a Contributor include a person, an organization or a service. Typically, the name of a Contributor should be used to indicate the entity.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="date" rdfs:label="Date" 
+ rdfs:comment="A date associated with an event in the life cycle of the resource. Typically, Date will be associated with the creation or availability of the resource. Recommended best practice for encoding the date value is defined in a profile of ISO 8601 [Date and Time Formats, W3C Note, http://www.w3.org/TR/NOTE-datetime] and follows the YYYY-MM-DD format.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="type" rdfs:label="Resource Type"
+ rdfs:comment="The nature or genre of the content of the resource. Type includes terms desribing general categories, functions, genres, or aggregation levels for content. Recommended best practice is to select a value from a controlled vocabulary (for example, the working draft list of Dublin Core Types [List of Resource Types. Dublin Core Draft Working Group Report, http://purl.org/DC/documents/working_drafts/wd-typelist.htm]). To describe the physical or digital manifestation of the resource, use the FORMAT element.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="format" rdfs:label="Format" 
+ rdfs:comment="The physical or digital manifestation of the resource. Typically, Format may include the media-type or dimensions of the resource. Format may be used to determine the software, hardware or other equipment needed to display or operate the resource.  Examples of dimensions include size and duration. Recommended best practice is to select a value from a controlled vocabulary (for example, the list of Internet Media Types [http://www.isi.edu/in-notes/iana/assignments/media-types/media-types] defining computer media formats).">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="identifier"
+ rdfs:label="Resource Identifier" rdfs:comment="An unambiguous reference to the resource within a given context. Recommended best practice is to identify the resource by means of a string or number conforming to a formal identification system.  Example of formal identification systems include the Uniform Resource Identifier (URI) (including the Uniform Resource Locator (URL), the Digital Object Identifier (DOI) and the International Standard Book Number (ISBN).">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="source" rdfs:label="Source" 
+ rdfs:comment="A Reference to a resource from which the present resource is derived. The present resource may be derived from the Source resource in whole or part. Recommended best practice is to reference the resource by means of a string or number conforming to a formal identification system.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="language" rdfs:label="Language"
+ rdfs:comment="A language of the intellectual content of the resource. Recommended best practice for the values of the Languge element is defined by RFC 1766 [Tags for the Identification of Languages, Internet RFC 1766, [http://info.internet.isi.edu/in-notes/rfc/files/rfc1766.txt] which includes a two letter Language Code (taken from the ISO 639 standard [Codes for the representation of names of languages, ISO 639, http://www.oasis-open.org/cover/iso639a.html]), followed optionally, by a two letter Country Code (taken from the ISO 3166 standard [Codes for the representation of names of countries, ISO 3166, http://www.oasis-open.org/cover/country3166.html]).  For example, en for English, fr French or en-uk used in the United Kingdom.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="relation" rdfs:label="Relation"
+ rdfs:comment="A reference to a related resource. Recommended best practice is to reference the resource by means of a string or number conforming to a formal identification system.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="coverage" rdfs:label="Coverage" 
+rdfs:comment="The extent or scope of the content of the resource. Coverage will typically include spatial location (a place name or geographic co-ordinates), temporal perion (a period label, date, or date range) or jurisdiction (such as a named administrative entity).  Recommended best practice is to select a value from a controlled vocabulary (for example, the Thesaurus of Geographic Names [Getty Thesaurus of Geographic Names, http://www.gii.getty.edu/tgn_browser]) and that, where appropriate, named places or time periods be used in preference to numberic identifiers such as sets of co-ordinates or date ranges.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="rights" rdfs:label="Rights" 
+rdfs:comment="Information about rights held in and over the resource. Typically a Rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses Intellectual Property Rights (IPR), Copyright, and various Property Rights. If the rights element is absent, no assumptions can be made about the status of these and other rights with respect to the resource.">
+ <rdfs:isDefinedBy rdf:resource="" />
+ <rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+</rdf:RDF>

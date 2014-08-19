@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XML Spy v3.0 NT (http://www.xmlspy.com) by BoB Best (none) -->
+<!ENTITY % rdf SYSTEM "rdf.dtd">
+%rdf;
+<!ELEMENT kxml:Archive (kxml:Users, kxml:Groups, kxml:DocTypes, kxml:Dtds, RDF, kxml:Content)>
+<!ELEMENT kxml:Cabinet (RDF, kxml:Content)>
+<!ELEMENT kxml:Drawer (RDF, kxml:Content)>
+<!ELEMENT kxml:Folder (RDF, kxml:Content)>
+<!ELEMENT kxml:Document (RDF)>
+<!ELEMENT kxml:Content (Bag)>
+<!ELEMENT kxml:Users (kxml:User*)>
+<!ELEMENT kxml:User (kxml:DocId*)>
+<!ATTLIST kxml:User id ID #REQUIRED
+	passwd CDATA #REQUIRED
+	administrator (TRUE | FALSE) "FALSE"
+>
+<!ELEMENT kxml:DocId EMPTY>
+<!ATTLIST kxml:DocId id CDATA #REQUIRED>
+<!ELEMENT kxml:Groups (kxml:Group*)>
+<!ELEMENT kxml:Group (kxml:Member+)>
+<!ATTLIST kxml:Group id ID #REQUIRED
+>
+<!ELEMENT kxml:Member EMPTY>
+<!ATTLIST kxml:Member id IDREF #REQUIRED
+>
+<!ELEMENT kxml:DocTypes (kxml:DocType*)>
+<!ELEMENT kxml:DocType EMPTY>
+<!ATTLIST kxml:DocType id CDATA #REQUIRED
+	command CDATA #REQUIRED
+>
+<!ELEMENT kxml:Dtds (kxml:Dtd*)>
+<!ELEMENT kxml:Dtd (kxml:Xsl*)>
+<!ATTLIST kxml:Dtd name ID #REQUIRED
+	uri CDATA #REQUIRED
+>
+<!ELEMENT kxml:Xsl EMPTY>
+<!ATTLIST kxml:Xsl name CDATA #REQUIRED
+	uri CDATA #REQUIRED
+>

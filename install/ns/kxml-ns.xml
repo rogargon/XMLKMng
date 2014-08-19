@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	 xmlns:rdfs="rdf-schema-ns.xml#"
+	 xmlns:dc="rec-dc-ns.xml#"
+	 xmlns:kxml="">
+<rdf:Description about="" 
+ dc:title="Knowledge-XML internal application RDF attributes" 
+ dc:creator="roberto.garcia@tecn.upf.es" 
+ dc:description="Application specific attributes used internally to facilitate the archive management" 
+ dc:date="2000-04-20" />
+
+<rdf:Description ID="Owner" rdfs:label="Owner"
+ rdfs:comment="The owner of the qualified resource">
+<rdfs:isDefinedBy rdf:resource="" />
+<rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="Read" rdfs:label="Authorized readers"
+ rdfs:comment="Entities authorized to read the resource">
+<rdfs:isDefinedBy rdf:resource="" />
+<rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="Write" rdfs:label="Authorized writers"
+ rdfs:comment="Entities authorized to write the resource">
+<rdfs:isDefinedBy rdf:resource="" />
+<rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="DTDName" rdfs:label="DTD name" 
+ rdfs:comment="The name of the DTD associated with the resource">
+<rdfs:isDefinedBy rdf:resource="" />
+<rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="DTDUri" rdfs:label="DTD URL"
+ rdfs:comment="The URL of the DTD associated with the resource">
+<rdfs:isDefinedBy rdf:resource="" />
+<rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="NewContent" rdfs:label="New content identifier"
+ rdfs:comment="The identifier of the new content of the resource">
+<rdfs:isDefinedBy rdf:resource="" />
+<rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="OldIdentifier" rdfs:label="Old identifier"
+ rdfs:comment="The previous identifier of the current resource">
+<rdfs:isDefinedBy rdf:resource="" />
+<rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+<rdf:Description ID="RemovedIdentifier" rdfs:label="Removed identifier"
+ rdfs:comment="The identifier of the removed resource">
+<rdfs:isDefinedBy rdf:resource="" />
+<rdf:type rdf:resource="rdf-syntax-ns#Property" />
+</rdf:Description>
+
+</rdf:RDF>

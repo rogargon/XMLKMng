@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>	<!--Lenguaje de definición de catálogos 	-->
+<!ELEMENT catalogo (producto*)>	<!--Compuesto por 0 o más productos 	-->
+<!ELEMENT producto (precio+, entrega?)>	<!--1 o más precios y 0 o 1 coste entrega 	-->
+<!ELEMENT precio (#PCDATA)>
+<!ATTLIST precio
+	tipo (mayor | detalle) "detalle"
+	moneda CDATA #REQUIRED
+>		<!--Composición de un precio y 	-->
+<!ELEMENT entrega (#PCDATA)>	<!--un coste de entrega 	-->
+<!ATTLIST entrega
+	metodo CDATA #REQUIRED
+	moneda CDATA #REQUIRED
+>
+

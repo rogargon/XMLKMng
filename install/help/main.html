@@ -1,0 +1,373 @@
+<html>
+<head>
+   <title>Manual de usuario de XML-KManager</title>
+</head>
+<body>
+
+<center><font size=+4><font color="#000080">XML</font> <font color="#008080">K</font>nowledge
+<font color="#800080">M</font>anager</font>
+<br><font face="Arial"><font color="#808080"><font size=+2>Manual de usuario</font></font></font></center>
+
+<table COLS=2 WIDTH="100%" >
+<tr VALIGN=TOP>
+<td WIDTH="50%"><b><font color="#400040"><font size=+3>&Iacute;ndice</font></font></b>
+<p><b><font face="Times New Roman"><a href="main.html#Instalación">Instalaci&oacute;n</a></font></b>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Instalar servidor">Servidor</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Instalar cliente">Cliente</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Visibroker">Visibroker</a></font>
+<p><b><font face="Times New Roman"><a href="main.html#Puesta en marcha">Puesta en
+marcha</a></font></b>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Arrancar servidor">Servidor</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Arrancar cliente">Cliente</a></font>
+<p>&nbsp;<b><font face="Times New Roman"><a href="main.html#Utilización">Utilizaci&oacute;n</a></font></b>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Interfaz">Descripci&oacute;n
+interfaz</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Interfaz">Cambio
+contrase&ntilde;a</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Navegación">Navegaci&oacute;n
+de la estructura</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Modificación metadatos">Modificaci&oacute;n
+de metadatos</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Crear elementos jerarquía">Creaci&oacute;n
+elementos de la jerarqu&iacute;a</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Archivar documentos">Archivado
+de documentos</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Consulta de documentos">Consulta
+de documentos</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Modificación de documentos">Modificaci&oacute;n
+de documentos</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Eliminación">Eliminaci&oacute;n
+de elementos y documentos</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Hojas estilo XSL">Hojas
+de estilos XSL</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Mensajes de Log">Mensajes
+de Log</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Documentos recientes">Documentos
+recientes</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Entornos de ventanas">Entornos
+de ventanas</a></font></td>
+
+<td VALIGN=TOP WIDTH="50%"><img SRC="xmlkmng.jpg" VSPACE=20 BORDER=0 height=314 width=200>
+<br><b><font face="Times New Roman"><a href="main.html#Admistración">Tareas de administraci&oacute;n</a></font></b>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Gestión usuarios">Gesti&oacute;n
+de usuarios</a></font>
+<br><font face="Times New Roman">&nbsp;&nbsp;&nbsp; <a href="main.html#Tipos documento">Definici&oacute;n
+de tipos de documento</a></font></td>
+</tr>
+</table>
+
+
+<p style="text-align: justify"><a NAME="Instalación"></a><b><font color="#000080"><font size=+3>Instalaci&oacute;n</font></font></b>
+
+<p style="text-align: justify"><b><font color="#800080">Requerimientos
+previos</font></b>
+<br>Para el funcionamiento de la aplicaci&oacute;n es necesario tener instalado
+el entorno de ejecuci&oacute;n de Java para la plataforma Java 2, JRE1.2
+o superior.
+<br>Versiones del JRE1.2.2 para Windows y Linux se incluyen en el CD de
+la aplicaci&oacute;n. Ir a la carpeta "java" del CD y seleccionar la versi&oacute;n
+apropiada. Instalarla siguiendo las instrucciones correspondientes.
+<br>Para m&aacute;s informaci&oacute;n y &uacute;ltimas versiones visitar
+<a href="http://java.sun.com">java.sun.com</a>.
+
+<p style="text-align: justify"><a NAME="Instalar servidor"></a><b><font color="#800080">Instalaci&oacute;n
+del servidor</font></b>
+<br>Este proceso se completa simplemente copiando el contenido de la carpeta
+"servidor" del CD a la localizaci&oacute;n del disco duro de la m&aacute;quina
+destino donde se quiera realizar la instalaci&oacute;n. Por ejemplo, en
+entorno Windows, "C:\XMLKMng".
+<br>Instalando el servidor se obtienen todos los servicios necesarios para
+poner en marcha tambi&eacute;n el cliente. Por lo tanto nunca ser&aacute;
+necesario instalar ambos en la misma m&aacute;quina.
+
+<p style="text-align: justify"><a NAME="Instalar cliente"></a><b><font color="#800080">Instalaci&oacute;n
+del cliente</font></b>
+<br>De igual forma que para el servidor el proceso instalaci&oacute;n se
+reduce a copiar el contenido de la carpeta "cliente" del CD a la localizaci&oacute;n
+del disco duro de la m&aacute;quina destino donde se quiera realizar la
+instalaci&oacute;n. Por ejemplo, como antes, "C:\XMLKMng". No existe ning&uacute;n
+problema en elegir la misma localizaci&oacute;n ya que no es necesario
+instalar cliente y servidor en la misma m&aacute;quina. Si s&oacute;lo
+se utilizar&aacute;n los servicios de cliente de la aplicaci&oacute;n bastar&aacute;
+con instalar el cliente.
+
+<p style="text-align: justify"><a NAME="Visibroker"></a><b><font color="#800080">Instalar
+Visibroker</font></b>
+<br>Esta implementaci&oacute;n de CORBA ofrece muchas m&aacute;s posibilidades
+que la b&aacute;sica que viene incluida con Java y es muy recomendable
+su instalaci&oacute;n si se quiere hacer uso de la aplicaci&oacute;n en
+un entorno distribuido.
+<br>Para llevar a cabo la instalaci&oacute;n primero es necesario copiar
+el contenido de la carpeta "corba" del CD de la aplicaci&oacute;n al disco
+duro de la m&aacute;quina destino, concretamente en "XMLKHOME\corba", siendo
+XMLKHOME la carpeta donde se instal&oacute; el servidor o cliente de la
+aplicaci&oacute;n. Para acabar la instalaci&oacute;n ser&aacute; necesario
+mover el archivo "orb.properties" a "JAVAHOME\jre\lib", siendo JAVAHOME
+el path donde se ha instalado Java.
+<br>Con esto se configura Java para que utilice la implementaci&oacute;n
+de CORBA de Visibroker de forma autom&aacute;tica. Si en cualquier momento
+se quiere volver a la implementaci&oacute;n por defecto de CORBA se debe
+borrar este archivo o cambiar su contenido para que indique cual es la
+implementaci&oacute;n que se quiere utilizar.
+
+<p style="text-align: justify"><a NAME="Puesta en marcha"></a><b><font color="#004080"><font size=+3>Puesta
+en marcha</font></font></b>
+<p><a NAME="Requerimientos arrancado"></a><b><font color="#800080">Requerimientos
+previos</font></b>
+<br>Se necesita el soporte de CORBA para el funcionamiento de la aplicaci&oacute;n,
+incluso si se le va a dar un uso puramente local. En este caso se utilizar&aacute;
+la implementaci&oacute;n CORBA suministrada con Java. Para ponerlo en marcha
+simplemente hay que ejecutar "tnameserv" que se encuentra dentro del directorio
+"JAVAHOME\bin".
+<br>Si la aplicaci&oacute;n se va a usar en un entorno distribuido es recomendable
+utilizar otra implementaci&oacute;n m&aacute;s completa, por ejemplo Visibroker3.4
+que se incluye en la carpeta "corba" del CD. Para instalarla seguir las
+instrucciones de <a href="main.html#Visibroker">Instalar Visibroker</a>. Se inicia
+el soporte CORBA de Visibroker ejecutando "visibroker" desde la carpeta
+donde se haya instalado Visibroker siguiendo el paso anterior.
+<p><a NAME="Arrancar servidor"></a><b><font color="#800080">Arrancar el
+servidor</font></b>
+<br>Para poner en marcha el servidor primario del sistema ir a XMLKHOME
+y ejecutar "servidor".
+<br>Se inicia entonces el proceso de arrancado de la r&eacute;plica principal
+del archivo. No debe existir ning&uacute;n otro servidor primario en marcha,
+en este caso aparecer&aacute; la ventana siguiente informando de esta incidencia.
+<center>
+<p><img SRC="started.gif" height=97 width=328></center>
+
+<p>Si el servidor se pone en marcha satisfactoriamente la ventana del servidor
+aparece informando de que se encuentra funcionando y desde que m&aacute;quina
+lo est&aacute; haciendo. Cerrando esta ventana se puede detener el funcionamiento
+del servidor.
+<center>
+<p><img SRC="correct.gif" height=97 width=328></center>
+
+<p>Cuando se produzca otra situaci&oacute;n la ventana mostrar&aacute;
+el mensaje de error correspondiente. Normalmente el problema ser&aacute;
+que no se ha puesto en marcha de forma correcta el soporte de CORBA, ser&aacute;
+necesario revisar este procedimiento tal y como se indica en los <a href="main.html#Requerimientos arrancado">requerimientos
+previos</a>.
+<p><a NAME="Arrancar cliente"></a><b><font color="#800080">Arrancar un
+cliente</font></b>
+<br>Para poner en marcha un cliente ir a la carpeta donde &eacute;ste fue
+instalado, XMLKHOME, y ejecutar "cliente".
+<br>El cliente, al arrancar, comprueba cu&aacute;l es la disponibilidad
+de r&eacute;plicas del archivo en su entorno de ejecuci&oacute;n, remoto
+o no. Se muestra entonces una ventana donde el usuario puede seleccionar
+la r&eacute;plica con la que quiere trabaja, identificadas por el nombre
+de la m&aacute;quina que la soporta. Adem&aacute;s en este listado se incluye
+una entrada para la m&aacute;quina local de forma que seleccion&aacute;ndola
+se ponga en marcha una nueva r&eacute;plica en ella. Solamente se permite
+una r&eacute;plica por m&aacute;quina de forma que si ya existe una residiendo
+en la m&aacute;quina local no se tendr&aacute; esta opci&oacute;n y se
+podr&aacute; operar sobre ella de igual forma que si se tratase de una
+remota.
+<center>
+<p><img SRC="select.gif" height=119 width=275></center>
+
+<p>Una vez seleccionada la r&eacute;plica del archivo sobre la que se trabajar&aacute;
+se iniciar&aacute; un proceso de autenticaci&oacute;n previo a la entrada
+efectiva en el archivo. Si se seleccion&oacute; arrancar una nueva copia
+del archivo realmente se producir&aacute;n dos autenticaciones. La primera
+adicional servir&aacute; para controlar el arrancado de nuevas r&eacute;plicas
+que &uacute;nicamente podr&aacute;n llevar a cabo los usuarios con derechos
+de administrador.
+<br><font color="#FF0000">NOTA</font>: en la primera ejecuci&oacute;n s&oacute;lo
+est&aacute; definido el usuario "administrator" con contrase&ntilde;a vac&iacute;a.
+Se deber&aacute; utilizar &eacute;ste para entrar e inmediatamente <a href="main.html#Cambio contraseña">cambiar
+su contrase&ntilde;a</a> por una m&aacute;s apropiada.
+<center>
+<p><img SRC="password.gif" height=121 width=403></center>
+
+<p>Se tendr&aacute;n tres intentos para satisfacer el control de acceso
+y si se cumple se producir&aacute; realmente la entrada al sistema asumiendo
+en rol del usuario del cual se ha hecho la autenticaci&oacute;n. Aparecer&aacute;
+la interfaz de usuario que le permitir&aacute;, a partir de ese momento,
+interactuar con el sistema bajo las restricciones de seguridad correspondientes
+al rol asumido.
+<br>&nbsp;
+<br>&nbsp;
+<p><a NAME="Utilización"></a><b><font color="#004080"><font size=+3>Utilizaci&oacute;n</font></font></b>
+<p><a NAME="Interfaz"></a><b><font face="Times New Roman"><font color="#800080">Descripci&oacute;n
+interfaz</font></font></b>
+<br><font face="Times New Roman">En la siguiente figura se detallan los
+elementos que componen la interfaz de usuario suministrada.</font>
+<center>
+<p><img SRC="gui.gif" height=384 width=512></center>
+
+<p><a NAME="Navegación"></a><a NAME="Cambio contraseña"></a><b><font face="Times New Roman"><font color="#800080">Cambio
+de contrase&ntilde;a</font></font></b>
+<br><font face="Times New Roman">Para mantener la seguridad del sistema
+es importante cambiar la contrase&ntilde;a suministrada inicialmente por
+una totalmente privada. Esto se consigue mediante la opci&oacute;n "Change
+password" del men&uacute; "Archive" de la barra de men&uacute;s.</font>
+<br>Esto es especialmente importante para el usuario inicial "administrator"
+que empieza con contrase&ntilde;a vac&iacute;a.
+<p><a NAME="Navegación"></a><b><font face="Times New Roman"><font color="#800080">Navegaci&oacute;n
+de la estructura</font></font></b>
+<br><font face="Times New Roman">A trav&eacute;s de la ventana de la vista
+de la jerarqu&iacute;a se puede navegar a trav&eacute;s de la estructura
+del archivo. La jerarqu&iacute;a se muestra en forma de &aacute;rbol con
+diferentes niveles para cada tipo de elemento. Los elementos de la jerarqu&iacute;a
+son nodos que se pueden expandir y contraer mostrando su contenido, otros
+elementos de la jerarqu&iacute;a y/o documentos.&nbsp; Cada nodo del &aacute;rbol
+tiene como texto asociado el identificador del elemento de la jerarqu&iacute;a
+o documento que representa.</font>
+<br><font face="Times New Roman">El elemento o documento activo ser&aacute;
+el nodo del &aacute;rbol seleccionado en un momento dado. En la vista de
+metadatos se muestran los metadatos asociados al elemento o documento que
+representa ese nodo. Sobre &eacute;l tambi&eacute;n se realizar&aacute;n
+por defecto todas las operaciones que tengan como objetivo un elemento
+o documento.</font>
+<p><a NAME="Modificación metadatos"></a><b><font face="Times New Roman"><font color="#800080">Modificaci&oacute;n
+de metadatos</font></font></b>
+<br>En la vista de metadatos se muestran los metadatos asociados al elemento
+del &aacute;rbol actualmente seleccionado como una tabla con dos columnas,
+la primera muestra el nombre de la propiedad y la segunda el valor que
+toma &eacute;sta para el elemento o documento activo.
+<br>Para a&ntilde;adir un nuevo atributo a los metadatos pulsar el bot&oacute;n
+derecho del rat&oacute;n sobre la tabla que muestra los metadatos.
+<br>Se muestra un men&uacute; flotante que permite borrar el atributo seleccionado
+en ese momento o a&ntilde;adir uno nuevo de entre los disponibles en el
+submen&uacute; "Add". La lista de este submen&uacute; corresponde con las
+propiedades disponibles en el esquema o vocabulario seleccionado en la
+lista desplegable de la parte superior de la vista de metadatos. Seleccionando
+uno de los atributos del submen&uacute; &eacute;ste se a&ntilde;ade al
+conjunto de metadatos.
+<br>Se pueden definir otros esquemas mediante el bot&oacute;n "Add" a la
+derecha del listado de esquemas. Con ello se muestra una ventana donde
+se puede definir el alias con el que se har&aacute; referencia al nuevo
+esquema y la localizaci&oacute;n de su definici&oacute;n. A partir del
+momento de la definici&oacute;n de un nuevo esquema, seleccion&aacute;ndolo
+en la lista de esquemas, todas las propiedades que define estar&aacute;n
+disponibles para describir el elemento sobre el que se est&eacute; trabajando.
+<br>Para dar valor a una nueva propiedad o modificar el o los de una existente
+ser&aacute; necesario editar la entrada correspondiente de la tabla. Esto
+se hace pulsando el bot&oacute;n izquierdo sobre la fila correspondiente
+de la segunda columna. Despu&eacute;s de esto se muestra una lista desplegable
+con los valores de esta propiedad. Pulsando el bot&oacute;n derecho sobre
+la parte inferior de la lista aparece un men&uacute; flotante que permite
+eliminar la entrada seleccionada en ese momento o insertar/a&ntilde;adir
+nuevas. Cuando se haya acabado de editar los valores de un atributo los
+cambios se har&aacute;n efectivos pulsando la tecla ENTER.
+<center>
+<p><img SRC="editmeta.gif" ALT="editmeta" height=222 width=336></center>
+
+<p><br>
+<p>Si una propiedad tiene m&aacute;s de un valor y no esta siendo editada
+los diferentes valores aparecen en la celda correspondiente separados por
+comas.
+<p><a NAME="Crear elementos jerarquía"></a><b><font face="Times New Roman"><font color="#800080">Creaci&oacute;n
+elementos de la jerarqu&iacute;a</font></font></b>
+<br>Para crear un nuevo elemento de la jerarqu&iacute;a pulsar el bot&oacute;n
+derecho del rat&oacute;n sobre la vista de la jerarqu&iacute;a estando
+seleccionado un elemento de la jerarqu&iacute;a. Del men&uacute; flotante
+que aparecer&aacute; seleccionar "Create element". En la vista de metadatos
+se muestra entonces una plantilla de metadatos parcialmente definida que
+permite acabar de completar los metadatos del nuevo elemento. Estos metadatos
+iniciales son simplemente una gu&iacute;a y se pueden modificar de forma
+normal, sobretodo el valor de "DC:identifier".
+<br>Cuando se hayan definido los metadatos deseados se proceder&aacute;
+a la creaci&oacute;n efectiva del nuevo elemento de la jerarqu&iacute;a
+pulsando el bot&oacute;n "Create" de la parte inferior de la vista de metadatos.
+<center>
+<p><img SRC="newelem.gif" ALT="newelem" height=258 width=336></center>
+
+<p><a NAME="Archivar documentos"></a><b><font face="Times New Roman"><font color="#800080">Archivado
+de documentos</font></font></b>
+<br>Se pueden archivar nuevos elementos siguiendo el mismo procedimiento
+que para crear un elemento, pero en este caso deber&aacute; estar seleccionada
+un elemento de la jerarqu&iacute;a que corresponda a una carpeta. En esta
+situaci&oacute;n en el men&uacute; flotante aparece la opci&oacute;n "Create
+document" que deber&aacute; seleccionarse. Como antes aparece la plantilla
+de metadatos para el nuevo documento en la vista de metadatos. Para los
+documentos ser&aacute; necesario rellenar las propiedades correspondientes
+al la URL que apunta al contenido y la que indica el tipo de dicho contenido,
+codificado como un identificador MIME.
+<p><a NAME="Consulta de documentos"></a><b><font face="Times New Roman"><font color="#800080">Consulta
+de documentos</font></font></b>
+<br><font face="Times New Roman">Para acceder al contenido de un documento
+se puede hacer doble clic sobre el nodo correspondiente en la vista de
+la jerarqu&iacute;a o, teni&eacute;ndolo seleccionado, elegir la opci&oacute;n
+"View" del men&uacute; flotante que aparece al pulsar el bot&oacute;n derecho
+del rat&oacute;n.</font>
+<br><font face="Times New Roman">Como resultado de esta acci&oacute;n se
+lanzar&aacute; la aplicaci&oacute;n de edici&oacute;n que tenga asignada
+el tipo de contenido correspondiente al documento. Si se trata de una componente
+integrado aparecer&aacute; en la ventana del Editor Integrado como una
+nueva pesta&ntilde;a. En otro caso se lanzar&aacute; la aplicaci&oacute;n
+externa en una nueva ventana y simult&aacute;neamente aparecer&aacute;
+una ventana de monitorizaci&oacute;n de contenidos que permitir&aacute;
+disfrutar, tambi&eacute;n en este caso, de los mensajes informando de las
+acciones que, por parte de otros usuario, vaya sufriendo dicho documento.</font>
+<p><a NAME="Eliminación"></a><b><font face="Times New Roman"><font color="#800080">Eliminaci&oacute;n
+de elementos y documentos</font></font></b>
+<br>En los dos casos se procede de igual forma, lo primero es seleccionar
+el elemento o documento a eliminar. A continuaci&oacute;n pulsar el bot&oacute;n
+derecho del rat&oacute;n y del men&uacute; flotante seleccionar "Delete".
+<p><a NAME="Hojas estilo XSL"></a><b><font face="Times New Roman"><font color="#800080">Hojas
+de estilo XSL</font></font></b>
+<br>El componente integrado suministrado para la visualizaci&oacute;n de
+contenidos XML ofrece la posibilidad de mostrar los documentos de este
+tipo en forma HTML aplicando diferentes hojas de estilo XSL.
+<br>Estas se pueden asociar a una DTD, de cualquiera de los documentos
+XML archivados, proporcionando la URL a su definici&oacute;n y un identificador.
+A partir de ese momento se podr&aacute; aplicar a los documentos XML visualizados
+que sigan esa DTD. Para realizar la asociaci&oacute;n ser&aacute; necesario
+recurrir al submen&uacute; "Associate XSL" dentro del men&uacute; "View".
+Aparecer&aacute; una tabla con todas las DTDs registradas en el archivo
+y sus XSLs asociadas. La edici&oacute;n de esta tabla se realiza de forma
+similar a la de la <a href="main.html#Modificación metadatos">vista de metadatos</a>.
+<p><a NAME="Mensajes de Log"></a><b><font face="Times New Roman"><font color="#800080">Mensajes
+de Log</font></font></b>
+<br><font face="Times New Roman">La ventana de Log muestra mensajes informativos
+sobre todas las operaciones de modificaci&oacute;n, no consultas, que se
+van produciendo en el sistema de forma global, tanto las locales como las
+procedentes de otros usuarios remotos.</font>
+<p><a NAME="Documentos recientes"></a><b><font face="Times New Roman"><font color="#800080">Documentos
+recientes</font></font></b>
+<br><font face="Times New Roman">A trav&eacute;s del men&uacute; "Archive"
+de la barra de men&uacute;s se tiene acceso en el submen&uacute; "Recent"
+a un listado de los cinco documentos usados m&aacute;s recientemente. Seleccionando
+la entrada correspondiente se tiene acceso directo a su contenido. Adem&aacute;s
+al arrancar el cliente se mostrar&aacute; abierto el documento que fue
+usado por &uacute;ltima vez, el primero de este submen&uacute;. Para la
+primera ejecuci&oacute;n de un usuario se abre el cliente mostrando este
+fichero de ayuda.</font>
+<p><a NAME="Entornos de ventanas"></a><b><font face="Times New Roman"><font color="#800080">Entornos
+de ventanas</font></font></b>
+<br><font face="Times New Roman">Las ventanas de la aplicaci&oacute;n pueden
+adoptar diferentes "looks" para adaptarse a las preferencias del usuario
+de forma que se integren en el entorno del sistema operativo donde se est&eacute;
+operando. Las opciones disponibles aparecen en el men&uacute; "View". "Metal"
+corresponde al look por defecto de Java, "Windows" se integra con dicho
+sistema y "Motif/DCE" encaja en los entornos de ventanas de Unix.</font>
+<p><a NAME="Admistración"></a><b><font color="#004080"><font size=+3>Tareas
+de administraci&oacute;n</font></font></b>
+<br>Las operaciones exclusivas del administrador aparecen en la barra de
+men&uacute;s dentro del men&uacute; "Administrator". Este aparece atenuado
+e inutilizable si el usuario actual no es un administrador.
+<p><a NAME="Gestión usuarios"></a><b><font face="Times New Roman"><font color="#800080">Gesti&oacute;n
+de usuarios</font></font></b>
+<br>Se pueden a&ntilde;adir y quitar usuarios con las opciones correspondientes
+del men&uacute; "Administrator", "Create user" y "Delete user" respectivamente.
+En el primer caso se solicitar&aacute;n su identificador y contrase&ntilde;a
+inicial. En el segundo se determinar&aacute; el usuario a eliminar proporcionando
+su identificador.
+<p><a NAME="Tipos documento"></a><b><font face="Times New Roman"><font color="#800080">Definici&oacute;n
+de tipos de documento</font></font></b>
+<br>Mediante la opci&oacute;n "Document types" del men&uacute; "Administrator"
+se accede a la ventana que permite editar o a&ntilde;adir nuevos tipos
+de contenido al archivo. En el primer caso se selecciona la entrada correspondiente
+y se puede cambiar la aplicaci&oacute;n que dicho tipo tiene asignada.
+Para a&ntilde;adir un nuevo tipo pulsar el bot&oacute;n "New type" de la
+parte inferior y suministrar el identificador y la aplicaci&oacute;n inicialmente
+asignada en la ventana emergente.
+<br><font color="#FF0000">NOTA</font>: si se trata de una aplicaci&oacute;n
+externa &eacute;sta se especificar&aacute; mediante el camino, path, el
+ejecutable que la inicia. Si es un componente integrado este se especifica
+mediante el nombre de la clase Java que le corresponde, que deber&aacute;
+estar almacenada en el men&uacute; "plugins" dentro de la carpeta donde
+est&aacute; instalada la aplicaci&oacute;n.
+</body>
+</html>

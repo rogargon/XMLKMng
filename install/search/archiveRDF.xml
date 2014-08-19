@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rdf:RDF
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:DC="http://purl.org/dc/rec-dces-19990702#"
+   xmlns:kxml="file:kxml-ns.xml#"
+   xmlns:research="file:research-ontology-schema.xml#"
+>
+    <rdf:Description rdf:about="http://www.w3.org/Home/Lassila.html">
+	<kxml:Owner>laasila</kxml:Owner>
+	<kxml:Read><Bag><li>investigadores</li></Bag></kxml:Read>
+	<kxml:Write><rdf:Bag/></kxml:Write>
+      	<DC:identifier>root/informática/investigación/investigadores/Ora Lassila</DC:identifier>
+	<DC:format>text/html</DC:format>
+	<rdf:type rdf:resource="file:research-ontology-schema.xml#Researcher"/>
+        <research:name>Lassila</research:name>
+      	<research:cooperatesWith rdf:resource="http://www.w3.org/Home/Saarela.html"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/Home/Saarela.html">
+	<kxml:Owner>saarela</kxml:Owner>
+	<kxml:Read><Bag><li>investigadores</li></Bag></kxml:Read>
+	<kxml:Write><rdf:Bag/></kxml:Write>
+      	<DC:identifier>root/informática/investigación/investigadores/Janne Saarela</DC:identifier>
+	<DC:format>text/html</DC:format>
+	<rdf:type rdf:resource="file:research-ontology-schema.xml#Researcher"/>
+	<research:name>Saarela</research:name>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="file:./examples/rdf-simple-intro.html">
+	<kxml:Owner>lassila</kxml:Owner>
+	<kxml:Read><kxml:Public/></kxml:Read>
+	<kxml:Write><rdf:Bag/></kxml:Write>
+	<DC:identifier>root/informática/investigación/publicaciones/RDF/IntroRDF</DC:identifier>
+	<DC:title>Introduction to RDF Metadata</DC:title>
+	<DC:format>text/html</DC:format>
+	<DC:date>1997-11-13</DC:date>
+	<rdf:type rdf:resource="file:research-ontology-schema.xml#TechnicalReport"/>
+ 	<research:author rdf:resource="http://www.w3.org/Home/Lassila.html"/>
+    </rdf:Description>
+
+</rdf:RDF>

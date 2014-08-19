@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ADDRESSBOOK SYSTEM "agenda.dtd">
+<ADDRESSBOOK>
+	<PERSON>
+		<LASTNAME>Idris</LASTNAME>
+		<FIRSTNAME>Nazmul</FIRSTNAME>
+		<COMPANY>The Bean Factory, LLC.</COMPANY>
+		<EMAIL>xml@beanfactory.com</EMAIL>
+	</PERSON>
+	<PERSON>
+		<LASTNAME>Miyamato</LASTNAME>
+		<FIRSTNAME>Murashito</FIRSTNAME>
+		<COMPANY>Bushido, Inc.</COMPANY>
+		<EMAIL>katana@bushido.com</EMAIL>
+	</PERSON>
+	<PERSON>
+		<LASTNAME>Einstein</LASTNAME>
+		<FIRSTNAME>Albert</FIRSTNAME>
+		<COMPANY>Proton, Inc.</COMPANY>
+		<EMAIL>emc2@proton.com</EMAIL>
+	</PERSON>
+	<PERSON>
+		<LASTNAME>Hampton</LASTNAME>
+		<FIRSTNAME>Ed</FIRSTNAME>
+		<COMPANY>AMAC, Inc.</COMPANY>
+		<EMAIL>energy@hsingi.com</EMAIL>
+	</PERSON>
+</ADDRESSBOOK>

@@ -1,0 +1,15 @@
+// Basic inference rules
+
+FORALL X,Y X:Y <- X["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"->>resource(Y)].
+FORALL X,Y X::Y <- X["http://www.w3.org/2000/01/rdf-schema#subClassOf"->>resource(Y)].
+
+FORALL X Symmetric(X) <- X["http://www.w3.org/1999/02/22-rdf-syntax-ns#type"->>
+	resource("http://ontoserver.aifb.uni-karlsruhe.de/schema/ontordf#Symmetric")].
+
+FORALL X,Y InverseOf(X,Y) <- 
+	 X["http://ontoserver.aifb.uni-karlsruhe.de/schema/ontordf#isInverseRelationOf"
+		->>resource(Y)].
+
+FORALL R,X,Y Y[R->>resource(X)] <- Symmetric(R) and X[R->>resource(Y)].
+
+FORALL A,B,X,Y B[Y->>resource(A)] <- A[X->>resource(B)] and InverseOf(X,Y).

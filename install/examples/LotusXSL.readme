@@ -1,0 +1,38 @@
+LREADME for LotusXSL project at http://www.alphaworks.ibm.com
+
+-- This LotusXSL build is 1.0.1.  It is compatible with Xerces 1.0.3.
+
+For information about setting up and using LotusXSL, open README.html.
+
+Basic Instructions for rebuilding LotusXSL:
+
+- Use GNU Make or an equivalent. On win32 you might try http://sourceware.cygnus.com/cygwin
+  Note that you will need the full Cygwin toolkit, since the make relies on a number
+  of other unix-like utilities like cp, rm, etc.  Also, the toolkit must be on your PATH
+  *before* most other Win32 utilities, notably the NT Resource Kit. Set MAKE_MODE as follows:
+       set MAKE_MODE=UNIX 
+
+- IMPORTANT: Our current build environment is an amalgam of the Xalan code and 
+  the LotusXSL-specific code, since LotusXSL is simply a wrapper over Xalan.  If you 
+  wish to rebuild, you need to use the full source tree provided in this distribution,
+  and use the lMakefiles provided to build.  The Makefile provided will build just the 
+  Xalan portion of the code.  Contact shane_curcuru@lotus.com for help rebuilding.
+
+- The makefiles use:
+    ifeq (,$(findstring usr,$(PATH)))
+  to determine if we're on Win32 (usr not in PATH) or a unix flavor (usr probably
+  in PATH).  Please let shane_curcuru@lotus.com know if you have a better way.
+
+- Before building the docs, place the JDK 1.2.2 bin directory in your system path, so the build
+  can use the JDK1.2.2 Javadoc tool to build the API documentation.
+  
+  See the makefiles for other environment notes.
+
+- Common make targets from the LotusXSL directory:
+    'make -f lMakefile all'      to build everything.
+    'make -f lMakefile build'    to compile and build the jar.
+    'make -f lMakefile jars'     to build jar files.
+    'make -f lMakefile docs'     to build the docs (they will be put into the docs_production directory).
+    'make -f lMakefile samples'  to build the samples and create samples.jar.
+    'make -f lMakefile clean'    as you'd expect.
+
